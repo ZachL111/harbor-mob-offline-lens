@@ -1,0 +1,32 @@
+{
+  "index": 372,
+  "phase": 2,
+  "batch": 42,
+  "name": "harbor-mob-offline-lens",
+  "planned_name": "harbor-mob-offline-lens",
+  "language": "Go",
+  "category": "Mobile workflows",
+  "goal": "Create a Go reference implementation for offline workflows, centered on stream reduction, windowed input fixtures, and late-data behavior checks.",
+  "repository_url": "https://github.com/ZachL111/harbor-mob-offline-lens",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 175,
+    "risk_penalty": 7,
+    "latency_penalty": 2,
+    "weight_bonus": 5,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
