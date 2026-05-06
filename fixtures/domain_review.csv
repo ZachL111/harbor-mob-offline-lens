@@ -1,0 +1,6 @@
+name,focus,signal,slack,drag,confidence,score,lane
+baseline,form pressure,54,36,30,53,107,watch
+stress,sync drift,70,49,25,47,161,ship
+edge,local state,64,24,21,83,172,ship
+recovery,conflict cost,56,48,21,54,151,ship
+stale,form pressure,58,39,20,72,167,ship

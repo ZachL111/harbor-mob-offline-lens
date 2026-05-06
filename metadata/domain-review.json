@@ -1,0 +1,73 @@
+{
+  "repo": "harbor-mob-offline-lens",
+  "language": "Go",
+  "category": "Mobile workflows",
+  "goal": "Create a Go reference implementation for offline workflows, centered on stream reduction, windowed input fixtures, and late-data behavior checks.",
+  "review_model": {
+    "terms": [
+      "form pressure",
+      "sync drift",
+      "local state",
+      "conflict cost"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "form pressure",
+      "signal": 54,
+      "slack": 36,
+      "drag": 30,
+      "confidence": 53,
+      "score": 107,
+      "lane": "watch"
+    },
+    {
+      "name": "stress",
+      "focus": "sync drift",
+      "signal": 70,
+      "slack": 49,
+      "drag": 25,
+      "confidence": 47,
+      "score": 161,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "local state",
+      "signal": 64,
+      "slack": 24,
+      "drag": 21,
+      "confidence": 83,
+      "score": 172,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "conflict cost",
+      "signal": 56,
+      "slack": 48,
+      "drag": 21,
+      "confidence": 54,
+      "score": 151,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "form pressure",
+      "signal": 58,
+      "slack": 39,
+      "drag": 20,
+      "confidence": 72,
+      "score": 167,
+      "lane": "ship"
+    }
+  ]
+}
